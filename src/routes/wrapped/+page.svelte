@@ -23,7 +23,7 @@
     let i: undefined | number = undefined;
 
     onMount(() => {
-        i = setInterval(updateV, 10000);
+        i = setInterval(updateV, 5000);
     });
 
     onDestroy(() => {
