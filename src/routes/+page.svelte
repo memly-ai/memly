@@ -32,6 +32,10 @@
 	let planHabit = false;
 	let journeyValue = '';
 	let newHabit: HabitType = { name: '', progress: 0, journey: [] };
+    newHabit.journey.push('Basic Chords');
+    newHabit.journey.push('Major Chords');
+    newHabit.journey.push('Play First Song');
+	newHabit = newHabit;
 </script>
 
 <div class="flex h-full w-full flex-col gap-1">
@@ -150,11 +154,11 @@
 						</div>
 					{/each}
 
-					<div class="flex w-full flex-row items-center gap-2">
+                    <div class="flex w-full flex-row items-flex-start gap-2">
 						<Hamburger />
 						<input
 							bind:value={journeyValue}
-							placeholder="Add a step"
+							placeholder={"Add a step"}
 							class="bg-grey-300/60 text-md w-full rounded-full text-center"
 						/>
 						<button
@@ -162,6 +166,7 @@
 								if (journeyValue !== '') {
 									newHabit.journey.push(journeyValue);
 									newHabit = newHabit;
+                                    journeyValue="Add a step";
 								}
 							}}
 							class="text-md rounded-full bg-green-500 px-4 py-2 text-white">Add</button
