@@ -1,11 +1,8 @@
 <script lang="ts">
 	import Add from '$lib/components/add.svelte';
-	import CalendarIcon from '$lib/components/CalendarIcon.svelte';
-	import Chart from '$lib/components/chart.svelte';
 	import Hamburger from '$lib/components/hamburger.svelte';
-	import Home from '$lib/components/home.svelte';
 	import Logo from '$lib/components/logo.svelte';
-	import Settings from '$lib/components/settings.svelte';
+	import Navigation from '$lib/components/navigation.svelte';
 
 	type HabitType = {
 		name: string;
@@ -89,14 +86,7 @@
 		</div>
 	</div>
 
-	<div class="flex flex-grow items-end">
-		<div class="flex w-full flex-row justify-evenly bg-[#F0E9E6] p-4">
-			<a href="/" class=""><Home /></a>
-			<a href="/" class=""><Chart /></a>
-			<a href="/" class=""><CalendarIcon /></a>
-			<a href="/" class=""><Settings /></a>
-		</div>
-	</div>
+  <Navigation />
 </div>
 
 <div
