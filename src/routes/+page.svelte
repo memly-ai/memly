@@ -1,7 +1,6 @@
 <script lang="ts">
-	import CalendarPage from './calendarpage/+page.svelte';
 	import Add from '$lib/components/add.svelte';
-	import Calendar from '$lib/components/calendar.svelte';
+	import CalendarIcon from '$lib/components/CalendarIcon.svelte';
 	import Chart from '$lib/components/chart.svelte';
 	import Hamburger from '$lib/components/hamburger.svelte';
 	import Home from '$lib/components/home.svelte';
@@ -94,7 +93,7 @@
 		<div class="flex w-full flex-row justify-evenly bg-[#F0E9E6] p-4">
 			<a href="/" class=""><Home /></a>
 			<a href="/" class=""><Chart /></a>
-			<a href="/" class=""><Calendar /></a>
+			<a href="/" class=""><CalendarIcon /></a>
 			<a href="/" class=""><Settings /></a>
 		</div>
 	</div>
