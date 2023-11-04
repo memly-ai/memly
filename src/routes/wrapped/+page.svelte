@@ -6,6 +6,7 @@
     
     import Upload from "$lib/wrapper/upload.svelte";
 	import { onDestroy, onMount } from "svelte";
+	import Navigation from "$lib/components/navigation.svelte";
     let v = 4;
 
     function updateV() {
@@ -32,7 +33,7 @@
     updateV();
 </script>
 
-<div>
+<div class="h-5/6">
     {#if v ===1 }
         <WrapW />
     {/if}
@@ -47,11 +48,11 @@
     {/if}
 </div>
 
-<div class="absolute bottom-6 w-full flex justify-center items-center">
+<div class="w-full flex justify-center items-center">
     <button class="w-5 h-5"><Upload /></button>
     <button class="pl-2">Share Your Journey</button>
 </div>
-
+<Navigation />
 
 
 
