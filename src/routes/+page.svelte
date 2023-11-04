@@ -144,18 +144,18 @@
 			<div class="py-4">
 				<div class="flex flex-col items-center gap-2">
 					{#each newHabit.journey as step}
-						<div class="w-full flex flex-row gap-2 items-center">
+						<div class="flex w-full flex-row items-center gap-2">
 							<Hamburger />
-							<p class="w-full text-md">{step}</p>
+							<p class="text-md w-full">{step}</p>
 						</div>
 					{/each}
 
-					<div class="w-full flex flex-row items-center gap-2">
+					<div class="flex w-full flex-row items-center gap-2">
 						<Hamburger />
 						<input
 							bind:value={journeyValue}
 							placeholder="Add a step"
-							class="bg-grey-300/60 w-full text-center text-md rounded-full"
+							class="bg-grey-300/60 text-md w-full rounded-full text-center"
 						/>
 						<button
 							on:click={() => {
@@ -164,7 +164,7 @@
 									newHabit = newHabit;
 								}
 							}}
-							class="rounded-full bg-green-500 px-4 py-2 text-md text-white">Add</button
+							class="text-md rounded-full bg-green-500 px-4 py-2 text-white">Add</button
 						>
 					</div>
 				</div>
