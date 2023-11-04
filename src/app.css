@@ -10,9 +10,11 @@ html {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #F4F4F4;
 }
 
 body {
 	max-width: 1440px;
 	width: 100%;
+	height: 100%;
 }
