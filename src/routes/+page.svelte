@@ -2,4 +2,4 @@
 	import CalendarPage from './calendarpage/+page.svelte';
 </script>
 
-<div><CalendarPage /></div>
+<div></div>
