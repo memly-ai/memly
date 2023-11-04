@@ -1,1 +1,5 @@
-<h1 class="text-5xl">Welcome to SvelteKit</h1>
+<script lang="ts">
+	import CalendarPage from './calendarpage/+page.svelte';
+</script>
+
+<div><CalendarPage /></div>
