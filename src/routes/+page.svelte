@@ -1,4 +1,5 @@
 <script lang="ts">
+	import CalendarPage from './calendarpage/+page.svelte';
 	import Add from '$lib/components/add.svelte';
 	import Calendar from '$lib/components/calendar.svelte';
 	import Chart from '$lib/components/chart.svelte';
