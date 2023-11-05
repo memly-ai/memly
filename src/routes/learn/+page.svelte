@@ -6,12 +6,12 @@
 	// section
 	// |- Section x/x
 	// |- Title
-	let section = ['Section 1 (of 4)', 'Basics of Entrepreneurship'];
+	let section = ['Section 1 (of 4)', 'Learning Guitar'];
 	let subsections = [
-		{ title: 'Ideation', suggestions: '', completed: true },
-		{ title: 'Market Research', suggestions: '', completed: true },
-		{ title: 'Team Research', suggestions: '', completed: true },
-		{ title: 'Networking', suggestions: '', completed: true },
+		{ title: 'Basic chords', suggestions: '', completed: true },
+		{ title: 'Major chords', suggestions: '', completed: true },
+		{ title: 'Play first song', suggestions: '', completed: true },
+		{ title: 'Practice scales', suggestions: '', completed: true },
 		{ title: 'Prototyping', suggestions: '', completed: false },
 		{ title: '', suggestions: '', completed: false },
 		{ title: 'Sunk-Cost Fallacy', suggestions: '', completed: false }
@@ -25,7 +25,7 @@
 </script>
 
 <nav
-	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-white pl-2 pr-2 pt-2"
+	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-[#f4f4f4] pl-2 pr-2 pt-2"
 >
 	<!-- logo -->
 	<img class="w-16" src="/logo.png" alt="memly logo" />
@@ -64,6 +64,7 @@
 			<div class="mt-16 flex aspect-square w-20 items-center justify-center rounded-full">
 				{#if subsection.completed}
 					<div class="w-20">
+						<p>{subsection.title}</p>
 						<Cube color={colors[index % 3]} />
 					</div>
 				{:else}
