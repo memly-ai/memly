@@ -26,7 +26,8 @@
         clearInterval(i);
     })
     
-    updateV();
+    // updateV();
+    v=1
 </script>
 
 <div class="h-5/6">
