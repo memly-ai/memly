@@ -25,12 +25,12 @@
 					{
 						color: 'bg-goldish',
 						Topic: 'Music',
-						Subtopic: 'Study music theory'
+						Subtopic: 'Review music theory'
 					},
 					{
 						color: 'bg-blueish',
 						Topic: 'Guitar',
-						Subtopic: 'Practice songs'
+						Subtopic: 'Practice \'Stairway to Heaven\''
 					}
 				]
 			}
@@ -51,10 +51,12 @@
 	</h2>
 	<div class="rounded-lg bg-white p-4 shadow-md">
 		{#each calendarData['11'][0]['5'] as topic}
-			<div class="font-inter mb-3 flex flex-row items-center gap-4 text-xl">
-				<div class={`h-9 w-9 rounded-full ${topic.color}`}></div>
-				<span class="font-bold w-1/4">{topic.Topic}</span>
-				{topic.Subtopic}
+			<div class="font-inter mb-4 flex flex-row items-center gap-2 text-xl">
+				<div class={`h-6 w-6 rounded-full ${topic.color}`}></div>
+				<span class="font-bold text-sm w-1/4">{topic.Topic}</span>
+				<p class="text-sm">
+					{topic.Subtopic}
+				</p>
 			</div>
 		{/each}
 	</div>
