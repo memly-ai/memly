@@ -6,12 +6,12 @@
 	// section
 	// |- Section x/x
 	// |- Title
-	let section = ['Section 1 (of 4)', 'Basics of Entrepreneurship'];
+	let section = ['Section 1 (of 4)', 'Learning Guitar'];
 	let subsections = [
-		{ title: 'Ideation', suggestions: '', completed: true },
-		{ title: 'Market Research', suggestions: '', completed: true },
-		{ title: 'Team Research', suggestions: '', completed: true },
-		{ title: 'Networking', suggestions: '', completed: true },
+		{ title: 'Basic chords', suggestions: '', completed: true },
+		{ title: 'Major chords', suggestions: '', completed: true },
+		{ title: 'Play first song', suggestions: '', completed: true },
+		{ title: 'Practice scales', suggestions: '', completed: true },
 		{ title: 'Prototyping', suggestions: '', completed: false },
 		{ title: '', suggestions: '', completed: false },
 		{ title: 'Sunk-Cost Fallacy', suggestions: '', completed: false }
@@ -30,7 +30,7 @@
 </script>
 
 <nav
-	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-white pl-2 pr-2 pt-2"
+	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-[#f4f4f4] pl-2 pr-2 pt-2"
 >
 	<!-- logo -->
 	<img class="w-16" src="/logo.png" alt="memly logo" />
@@ -68,18 +68,23 @@
 		<div class="box-border odd:pl-24 even:pr-24">
 			<div class="mt-16 flex aspect-square w-20 items-center justify-center rounded-full">
 				{#if subsection.completed}
-					<div class="w-20" on:click={() => {showTimer = true}}>				
+					<div
+						class="w-20"
+						on:click={() => {
+							showTimer = true;
+						}}
+					>
+					<p>{subsection.title}</p>
 						<Cube color={colors[index % 3]} />
 					</div>
 				{:else}
-					<div class="w-20 -scale-x-100">						
+					<div class="w-20 -scale-x-100">
 						<Cube color="fill-gray-600" />
 					</div>
 				{/if}
 			</div>
 		</div>
 	{/each}
-
 </div>
 
 <div class="mt-8 flex w-full flex-col items-center justify-center">
@@ -91,33 +96,54 @@
 <!-- TODO: path graphic -->
 
 {#if showTimer}
-  <div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 w-screen h-screen p-4">
-    <div class="flex flex-col gap-4 justify-center items-center bg-white p-4 rounded-lg shadow-md w-full h-2/3">
-      <!-- Pop-up content goes here -->
-	  {#if start}
-	  <button on:click={() => {
-		start = false; 
-		cur_date = new Date().getTime(); 
-		final_date = Math.floor((new Date().getTime()-cur_date)/1000)
-		setInterval(() => {
-			final_date= Math.floor((new Date().getTime()-cur_date)/1000); 
-		}, 1000)
-		}} class="flex flex-row items-center justify-center w-32 h-32 rounded-full border border-[green] border-4 bg-white">
-			<h2 class="text-2xl">Start</h2>
-	  </button>
-	  {:else}
-	  <h1 class="text-2xl">{final_date} secs</h1>
-	  <button on:click={() => {start = true; cur_date=0; final_date=0;}} class="flex flex-row items-center justify-center w-32 h-32 rounded-full border border-[red] border-4 bg-white">
-		<h2 class="text-2xl">Stop</h2>
-  	  </button>
-	  {/if}
-	  <div class="flex flex-row justify-evenly p-5 w-full ">
-		<p>+15</p>
-		<p>+30</p>
-		<p>+60</p>
-	  </div>
+	<div
+		class="fixed inset-0 flex h-screen w-screen items-center justify-center bg-black bg-opacity-50 p-4"
+	>
+		<div
+			class="flex h-2/3 w-full flex-col items-center justify-center gap-4 rounded-lg bg-white p-4 shadow-md"
+		>
+			<!-- Pop-up content goes here -->
+			{#if start}
+				<button
+					on:click={() => {
+						start = false;
+						cur_date = new Date().getTime();
+						final_date = Math.floor((new Date().getTime() - cur_date) / 1000);
+						setInterval(() => {
+							final_date = Math.floor((new Date().getTime() - cur_date) / 1000);
+						}, 1000);
+					}}
+					class="flex h-32 w-32 flex-row items-center justify-center rounded-full border border-4 border-[green] bg-white"
+				>
+					<h2 class="text-2xl">Start</h2>
+				</button>
+			{:else}
+				<h1 class="text-2xl">{final_date} secs</h1>
+				<button
+					on:click={() => {
+						start = true;
+						cur_date = 0;
+						final_date = 0;
+					}}
+					class="flex h-32 w-32 flex-row items-center justify-center rounded-full border border-4 border-[red] bg-white"
+				>
+					<h2 class="text-2xl">Stop</h2>
+				</button>
+			{/if}
+			<div class="flex w-full flex-row justify-evenly p-5">
+				<p>+15</p>
+				<p>+30</p>
+				<p>+60</p>
+			</div>
 
-      <button on:click={() => {showTimer = false; cur_date=0; final_date=0; start = true}}>Close</button>
-    </div>
-  </div>
+			<button
+				on:click={() => {
+					showTimer = false;
+					cur_date = 0;
+					final_date = 0;
+					start = true;
+				}}>Close</button
+			>
+		</div>
+	</div>
 {/if}

@@ -60,7 +60,7 @@
 										style="width: {skill.progress}%"
 									></div>
 								</div>
-								<button class="rounded-lg border border-gray-300 px-2 py-1 text-sm">Learn</button>
+								<button class="rounded-lg border border-gray-300 px-2 py-1 text-sm"><a href="/learn">Learn</a></button>
 							</div>
 						</div>
 					{/each}
