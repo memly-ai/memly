@@ -70,10 +70,10 @@
 			<div class="mt-2 w-full rounded-md px-4 py-6 pt-8 shadow-xl">
 				<h1 class="text-sm font-bold">Your Skills</h1>
 				<div class="flex w-full flex-col gap-2 divide-y-2 pt-4">
-					{#each skills as skill}
+					{#each skills as skill, i}
 						<div class="flex w-full flex-row items-center justify-between">
 							<div class="w-1/3">
-								<p class="text-sm">{skill.name}</p>
+								<p class="text-sm">{skill.name} {i == 2 ? '🔥 3' : ''} {i == 0 ? '🔥 2' : ''}</p>
 							</div>
 							<div class="w-2/3">
 								<div class="h-2.5 w-full rounded-full bg-[#D9D9D9]">
