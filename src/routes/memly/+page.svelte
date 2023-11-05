@@ -22,15 +22,15 @@
     }
     let i: undefined | number = undefined;
 
-    // onMount(() => {
-    //     i = setInterval(updateV, 3000);
-    // });
+    onMount(() => {
+        i = setInterval(updateV, 3000);
+    });
 
-    // onDestroy(() => {
-    //     clearInterval(i);
-    // })
+    onDestroy(() => {
+        clearInterval(i);
+    })
     
-    // updateV();
+    updateV();
     v=2
 </script>
 
