@@ -1,5 +1,8 @@
 <script lang="ts">
     export let x = 0;
+    export let color : string;
+    export let mastery : string;
+    let circumference = 40*2*Math.PI;
 </script>
 
 <div class="relative w-15 h-15">
@@ -15,18 +18,19 @@
       ></circle>
       <!-- Progress circle -->
       <circle
-        class="text-indigo-500 progress-ring__circle stroke-current"
+        class="{color} stroke-current"
         stroke-width="10"
+        stroke-dasharray="{circumference + " " +circumference}"
+        stroke-dashoffset="{circumference - x / 100 * circumference}"
         stroke-linecap="round"
         cx="50"
         cy="50"
         r="40"
         fill="transparent"
-        stroke-dashoffset="10"
       ></circle>
       
       <!-- Center text -->
-      <text x="50" y="50" font-family="Inter" font-size="12" text-anchor="middle" alignment-baseline="middle">{x}%</text>
+      <text x="50" y="55" font-family="Inter" font-size="12" text-anchor="middle" alignment-baseline="middle">Lvl {mastery}</text>
   
     </svg>
   </div>
