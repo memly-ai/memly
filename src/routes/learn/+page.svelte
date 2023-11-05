@@ -6,12 +6,12 @@
 	// section
 	// |- Section x/x
 	// |- Title
-	let section = ['Section 1 (of 4)', 'Basics of Entrepreneurship'];
+	let section = ['Section 1 (of 4)', 'Learning Guitar'];
 	let subsections = [
-		{ title: 'Ideation', suggestions: '', completed: true },
-		{ title: 'Market Research', suggestions: '', completed: true },
-		{ title: 'Team Research', suggestions: '', completed: true },
-		{ title: 'Networking', suggestions: '', completed: true },
+		{ title: 'Basic Chords', suggestions: '', completed: true },
+		{ title: 'Major Chords', suggestions: '', completed: true },
+		{ title: 'Play First Song', suggestions: '', completed: true },
+		{ title: 'Practice Scales', suggestions: '', completed: true },
 		{ title: 'Prototyping', suggestions: '', completed: false },
 		{ title: '', suggestions: '', completed: false },
 		{ title: 'Sunk-Cost Fallacy', suggestions: '', completed: false }
@@ -30,7 +30,7 @@
 </script>
 
 <nav
-	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-white pl-2 pr-2 pt-2"
+	class="sticky left-0 right-0 top-0 flex flex-wrap items-center justify-between bg-[#F4F4F4] pl-2 pr-2 pt-2"
 >
 	<!-- logo -->
 	<img class="w-16" src="/logo.png" alt="memly logo" />
@@ -68,7 +68,8 @@
 		<div class="box-border odd:pl-24 even:pr-24">
 			<div class="mt-16 flex aspect-square w-20 items-center justify-center rounded-full">
 				{#if subsection.completed}
-					<div class="w-20" on:click={() => {showTimer = true}}>				
+					<div class="w-20" on:click={() => {showTimer = true}}>
+						<p>{subsection.title}</p>				
 						<Cube color={colors[index % 3]} />
 					</div>
 				{:else}
