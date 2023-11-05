@@ -155,7 +155,7 @@
 								if (journeyValue !== '') {
 									newHabit.journey.push(journeyValue);
 									newHabit = newHabit;
-                                    journeyValue="Add a step";
+                                    journeyValue="";
 								}
 							}}
 							class="text-md rounded-full bg-green-500 px-4 py-2 text-white">Add</button
