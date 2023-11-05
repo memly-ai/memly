@@ -8,7 +8,7 @@
             <img class="w-8 rounded-full mr-2" src="/pfp.jpg" alt="omar's avatar" />
             <p>Omar's <span class="text-[#52ADE1]"><b>memly</b></span></p>
         </div>
-        <h1 class="text-5xl py-4" style="font-size: 30px;">Of your <span class="text-3xl font-bold text-[#52ADE1]">53</span> new skills...</h1>
+        <h1 class="text-5xl py-4" style="font-size: 30px;">Of your <span class="text-3xl font-bold text-[#52ADE1]">19</span> new skills...</h1>
         <p class="mb-3">
             Here are your <span class="text-[#DC5E65] font-bold">top five</span> by tasks:
         </p>

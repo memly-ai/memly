@@ -14,11 +14,11 @@
         <div class="flex flex-col justify-flex-start">
             <div class="flex flex-row items-center mb-4">
                 <div class="w-16 h-16 mr-3"><Thropy /></div>
-                acquired&nbsp;<span class="text-3xl font-bold text-[#52ADE1]">53</span>&nbsp;new skills!
+                acquired&nbsp;<span class="text-3xl font-bold text-[#52ADE1]">19</span>&nbsp;new skills!
             </div>
             <div class="flex items-center mb-4">
                 <div class="w-16 h-16 mr-3"><Cap /></div>
-                mastered&nbsp;<span class="text-3xl font-bold text-[#52ADE1]">13</span>&nbsp;skills!
+                mastered&nbsp;<span class="text-3xl font-bold text-[#52ADE1]">5</span>&nbsp;skills!
             </div>
             <div class="flex items-center">
                 <div class="w-16 h-16 mr-3"><Hourglass /></div>
