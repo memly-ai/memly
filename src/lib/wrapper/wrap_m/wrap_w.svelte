@@ -5,7 +5,7 @@
 </script>
 
 <div class="mx-5 flex items-center">
-    <div class="rounded-md shadow-xl w-full p-5 mt-[200px]">
+    <div class="rounded-md shadow-xl w-full p-5 mt-[100px]">
         <div class="flex flex-row items-center mb-2">
             <img class="w-8 rounded-full mr-2" src="/pfp.jpg" alt="omar's avatar" />
             <p>Omar's <span class="text-[#52ADE1]"><b>memly</b></span></p>
