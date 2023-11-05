@@ -10,28 +10,23 @@
     let v = 4;
 
     function updateV() {
-        if (v === 1) {
-            v = 2;
-        } else if (v === 2) {
-            v = 3;
-        } else if (v === 3) {
-            v = 4;
-        } else if (v === 4) {
+        if (v < 4) {
+            v++;
+        } else {
             v = 1;
         }
     }
     let i: undefined | number = undefined;
 
-    // onMount(() => {
-    //     i = setInterval(updateV, 3000);
-    // });
+    onMount(() => {
+        i = setInterval(updateV, 5000);
+    });
 
-    // onDestroy(() => {
-    //     clearInterval(i);
-    // })
+    onDestroy(() => {
+        clearInterval(i);
+    })
     
-    // updateV();
-    v=2
+    updateV();
 </script>
 
 <div class="h-5/6">
@@ -39,13 +34,13 @@
         <WrapW />
     {/if}
     {#if v ===2 }
-        <Level />
+        <SkillsSum />
     {/if}
     {#if v ===3 }
-        <Learn />
+        <Level />
     {/if}
     {#if v ===4 }
-        <SkillsSum />
+        <Learn />
     {/if}
 </div>
 
